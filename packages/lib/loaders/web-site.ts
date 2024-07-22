@@ -34,7 +34,7 @@ export class WebSiteLoader extends DatasourceLoaderBase<DatasourceWebSite> {
 
     const currentPlan =
       this.datasource?.organization?.subscriptions?.[0]?.plan ||
-      SubscriptionPlan.level_0;
+      SubscriptionPlan.level_4;
 
     const maxPages = accountConfig[currentPlan]?.limits?.maxWebsiteURL || 25;
 

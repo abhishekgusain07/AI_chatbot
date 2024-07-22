@@ -6,7 +6,7 @@
   "types": "src/index.ts",
   "scripts": {
     "lint": "eslint --fix src/*",
-    "dev": "email dev --port 8888 --dir src"
+    "dev": "echo \"Email dev server skipped\""
   },
   "dependencies": {
     "@chaindesk/prisma": "workspace:*",

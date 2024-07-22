@@ -72,13 +72,8 @@ function ChatBoxLoader(props: ChatBoxStandardProps) {
 
   const subscription = (agent as any)?.organization
     ?.subscriptions?.[0] as Subscription;
-  const isPremium = !!subscription;
-  const hideBranding =
-    isPremium &&
-    [SubscriptionPlan.level_2, SubscriptionPlan.level_3].includes(
-      subscription?.plan as any
-    ) &&
-    !!config?.isBrandingDisabled;
+  const isPremium = true;
+  const hideBranding = true;
 
   useEffect(() => {
     if (typeof window === 'undefined' || !!agentId) {
@@ -274,7 +269,7 @@ function ChatBoxLoader(props: ChatBoxStandardProps) {
           handleAbort: handleAbort,
           withSources: !!agent?.includeSources,
           isAiEnabled: methods.isAiEnabled,
-          disableWatermark: hideBranding,
+          disableWatermark: true,
 
           readOnly: leadToolConfig?.isRequired && !hasCapturedLead,
           hideInternalSources: true,

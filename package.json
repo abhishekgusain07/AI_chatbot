@@ -5,7 +5,7 @@
   "scripts": {
     "prepare": "husky install",
     "start": "next start",
-    "dev": "FORCE_COLOR=1 pnpm docker:up && turbo run dev --filter=dashboard... --filter=lp... --filter=docs... --parallel --no-cache",
+    "dev": "FORCE_COLOR=1 pnpm docker:up && turbo run dev --filter=dashboard... --filter=!@chaindesk/emails... --filter=!lp... --parallel --no-cache",
     "build": "FORCE_COLOR=1 turbo run build --filter=dashboard... --filter=lp... --filter=!react-email-client --parallel",
     "dotenv": "dotenv -e .env.local",
     "typecheck": "FORCE_COLOR=1 turbo typecheck",

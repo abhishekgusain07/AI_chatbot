@@ -332,8 +332,8 @@ export const formatUserSession = (
     id: user.id,
     currentPlan:
       user?.subscriptions?.[0]?.plan ||
-      (SubscriptionPlan.level_0 as SubscriptionPlan),
-    isPremium: Number(user?.subscriptions?.length) > 0,
+      (SubscriptionPlan.level_4 as SubscriptionPlan),
+    isPremium: true,
     customerId: user?.subscriptions?.[0]?.customerId as string,
   };
 };
@@ -350,8 +350,8 @@ export const formatOrganizationSession = (
     nbDatastores: organization?.['_count']?.datastores as number,
     currentPlan:
       organization?.subscriptions?.[0]?.plan ||
-      (SubscriptionPlan.level_0 as SubscriptionPlan),
-    isPremium: Number(organization?.subscriptions?.length) > 0,
+      (SubscriptionPlan.level_4 as SubscriptionPlan),
+    isPremium: true,
     customerId: organization?.subscriptions?.[0]?.customerId as string,
   };
 };
