@@ -25,24 +25,10 @@ export default function FormPage(props: { agent: Agent }) {
         description={`Build ChatGPT-powered conversational forms with Chaindesk.ai`}
         url={`https://app.chaindesk.ai/forms/${formId}`}
       />
-      {/*
-
-      
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-
-*/}
       <Stack component="main" sx={{ width: '100dvw', height: '100dvh' }}>
         <Stack sx={{ position: 'fixed', top: 20, right: 20 }}>
           <DarkModeToggle />
         </Stack>
-
         <BlablaFormLoader
           formId={formId}
           conversationId={conversationId}

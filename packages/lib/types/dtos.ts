@@ -777,7 +777,6 @@ export const FormConfigSchema = z.object({
   schema: z.any(),
 });
 export type FormConfigSchema = z.infer<typeof FormConfigSchema>;
-
 export const CreateFormSchema = z.object({
   id: z.string().optional(),
   type: z.nativeEnum(FormType).optional(),

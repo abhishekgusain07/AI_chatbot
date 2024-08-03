@@ -151,40 +151,6 @@ function FormDashboard(props: FormDashboardProps) {
         >
           <TabList
             size="sm"
-            // sx={{
-            //   [`&& .${tabClasses.root}`]: {
-            //     flex: 'initial',
-            //     bgcolor: 'transparent',
-            //     '&:hover': {
-            //       bgcolor: 'transparent',
-            //     },
-            // [`&.${tabClasses.selected}`]: {
-            //   color: 'primary.plainColor',
-            //   '&::after': {
-            //     height: '3px',
-            //     borderTopLeftRadius: '3px',
-            //     borderTopRightRadius: '3px',
-            //     bgcolor: 'primary.500',
-            //   },
-            // },
-            //   },
-            // }}
-
-            // sx={{
-            //   p: 0.7,
-            //   gap: 0.5,
-            //   borderRadius: 'xl',
-            //   bgcolor: 'background.level1',
-            //   [`& .${tabClasses.root}[aria-selected="true"]`]: {
-            //     boxShadow: 'sm',
-            //     bgcolor: 'background.surface',
-            //     '&::after': {
-            //       height: '0px',
-            //       width: '0px',
-            //     },
-            //   },
-            // }}
-
             sx={{
               // pt: 2,
               justifyContent: 'start',
@@ -265,13 +231,3 @@ export default FormDashboard;
 FormDashboard.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>;
 };
-
-// export const getServerSideProps = withAuth(
-//   async (ctx: GetServerSidePropsContext) => {
-//     return {
-//       props: {
-//         product: getProductFromHostname(ctx?.req?.headers?.host),
-//       },
-//     };
-//   }
-// );
